@@ -9,6 +9,8 @@ public class VRGaze : MonoBehaviour
     public Transform NextFloor;
     public Transform PreviousFloor;
     public Transform CloseDoor;
+    public Transform GoOutside;
+    public Transform GoInside;
 
     public float followSharpness = 0.1f;
 
@@ -65,6 +67,8 @@ public class VRGaze : MonoBehaviour
         changePosition(NextFloor);
         changePosition(PreviousFloor);
         changePosition(CloseDoor);
+        changePosition(GoOutside);
+        changePosition(GoInside);
 
     }
 
@@ -113,6 +117,16 @@ public class VRGaze : MonoBehaviour
                 elevControl.PreviousFloor();
                 Debug.Log("Elevator is called");
                 gvrStatus = false;
+            }
+
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("TeleportOutside") && gvrStatus)
+            {
+                _hit.transform.gameObject.GetComponent<Teleport>().TeleportPlayerOutside();
+            }
+
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("TeleportInside") && gvrStatus)
+            {
+                _hit.transform.gameObject.GetComponent<Teleport>().TeleportPlayerInside();
             }
 
 
