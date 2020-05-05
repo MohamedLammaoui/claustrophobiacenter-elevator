@@ -16,6 +16,10 @@ TagManager:
   - Floors
   - TeleportOutside
   - TeleportInside
+  - ElevatorScene
+  - ExitApplicationScene
+  - RestroomScene
+  - TestTag
   layers:
   - Default
   - TransparentFX
