@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VRGaze : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class VRGaze : MonoBehaviour
     public Transform CloseDoor;
     public Transform GoOutside;
     public Transform GoInside;
+    public Transform Restroom;
 
     public float followSharpness = 0.1f;
 
@@ -69,6 +71,7 @@ public class VRGaze : MonoBehaviour
         changePosition(CloseDoor);
         changePosition(GoOutside);
         changePosition(GoInside);
+        changePosition(Restroom);
 
     }
 
@@ -86,6 +89,12 @@ public class VRGaze : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if(Physics.Raycast(ray, out _hit, distanceOfRay))
         {
+            if (imgGaze.fillAmount == 1 && gvrStatus && _hit.transform.CompareTag("RestRoomButton") && gvrStatus)
+            {
+                SceneManager.LoadScene("Menu");
+                gvrStatus = false;
+            }
+
             if (imgGaze.fillAmount == 1 && gvrStatus && _hit.collider.name == "elevCallBtnPanel")
             {
                 elevControl.CallElevator();
