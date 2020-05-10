@@ -21,6 +21,7 @@ TagManager:
   - RestroomScene
   - TestTag
   - RestRoomButton
+  - HelperCanvas
   layers:
   - Default
   - TransparentFX
