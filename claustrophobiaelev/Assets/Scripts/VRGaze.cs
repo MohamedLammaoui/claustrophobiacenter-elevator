@@ -91,7 +91,7 @@ public class VRGaze : MonoBehaviour
         {
             if (imgGaze.fillAmount == 1 && gvrStatus && _hit.transform.CompareTag("RestRoomButton") && gvrStatus)
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("Restroom");
                 gvrStatus = false;
             }
 

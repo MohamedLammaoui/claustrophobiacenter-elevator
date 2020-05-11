@@ -744,6 +744,7 @@ GameObject:
   - component: {fileID: 106129378}
   - component: {fileID: 106129377}
   - component: {fileID: 106129376}
+  - component: {fileID: 106129382}
   m_Layer: 0
   m_Name: TeleportInside
   m_TagString: TeleportInside
@@ -881,6 +882,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &106129382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106129375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4f08f3534e09044a698165fea466a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 466361509}
 --- !u!1 &122567349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3165,7 @@ GameObject:
   - component: {fileID: 658430938}
   - component: {fileID: 658430937}
   - component: {fileID: 658430942}
+  - component: {fileID: 658430943}
   m_Layer: 0
   m_Name: TeleportOutside
   m_TagString: TeleportOutside
@@ -3285,6 +3300,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff5687539c3dcf441a9418ea04ad28f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 466361509}
+--- !u!114 &658430943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658430936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4f08f3534e09044a698165fea466a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 466361509}
@@ -3996,7 +4024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80963266e3eab26489907777cae1fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinForce: 45
 --- !u!1 &1052486862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4115,7 +4142,7 @@ RectTransform:
   m_GameObject: {fileID: 1070931377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 916157922}
   m_RootOrder: 0
