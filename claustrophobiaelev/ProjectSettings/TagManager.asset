@@ -22,6 +22,10 @@ TagManager:
   - TestTag
   - RestRoomButton
   - HelperCanvas
+  - LevelOneButton
+  - LevelTwoButton
+  - LevelThreeButton
+  - StartMenuButton
   layers:
   - Default
   - TransparentFX

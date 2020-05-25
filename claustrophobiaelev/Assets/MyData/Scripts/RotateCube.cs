@@ -39,9 +39,9 @@ public class RotateCube : MonoBehaviour
                 _hit.transform.gameObject.GetComponent<Teleport>().TeleportPlayer();
             }
 
-            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("RestRoomButton"))
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("StartMenuButton"))
             {
-                SceneManager.LoadScene("Elevator");
+                SceneManager.LoadScene("StartMenu");
             }
         }
     }
