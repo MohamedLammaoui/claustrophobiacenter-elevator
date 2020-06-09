@@ -7,7 +7,7 @@ public class Teleport : MonoBehaviour
    public GameObject player;
    public void TeleportPlayer()
    {
-       player.transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
+       player.transform.position = new Vector3(transform.position.x, transform.position.y + 4f, transform.position.z);
    }
 
     public void TeleportPlayerOutside()
@@ -17,6 +17,6 @@ public class Teleport : MonoBehaviour
 
     public void TeleportPlayerInside()
     {
-        player.transform.position = new Vector3(transform.position.x + 0.8f, transform.position.y, transform.position.z - 1.0f);
+        player.transform.position = new Vector3(transform.position.x + 0.6f, transform.position.y, transform.position.z - 1.3f);
     }
 }
